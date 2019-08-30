@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace wooliesx.service.services
 {
-    public interface IExercise1service
+    public interface IExercise1Service
     {
 
         UserResponse GetUser();

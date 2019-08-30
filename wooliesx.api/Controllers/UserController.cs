@@ -15,12 +15,12 @@ namespace wooliesx.api.Controllers
     [ApiController]
     public class UserController : Controller
     {
-        private readonly IExercise1service _exercise1Service;
+        private readonly IExercise1Service _exercise1Service;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="exercise1Service"></param>
-        public UserController(IExercise1service exercise1Service)
+        public UserController(IExercise1Service exercise1Service)
         {
             _exercise1Service = exercise1Service;
         }

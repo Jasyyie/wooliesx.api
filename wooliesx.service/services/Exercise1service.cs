@@ -4,7 +4,7 @@ using wooliesx.model.models;
 
 namespace wooliesx.service.services
 {
-    public class Exercise1service : IExercise1service
+    public class Exercise1Service : IExercise1Service
     {
         public UserResponse GetUser()
         {

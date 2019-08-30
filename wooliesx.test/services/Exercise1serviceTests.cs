@@ -9,11 +9,11 @@ namespace wooliesx.test.services
     [TestClass]
     public class Exercise1ServiceTests
     {
-        private IExercise1service _exercise1Service;
+        private IExercise1Service _exercise1Service;
         [TestInitialize]
         public void Initialize()
         {
-            _exercise1Service = Substitute.ForPartsOf<Exercise1service>();
+            _exercise1Service = Substitute.ForPartsOf<Exercise1Service>();
         }
 
         [TestMethod]
