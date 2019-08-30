@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace wooliesx.api.Controllers
 {
+    /// <summary>
+    /// Controller to manage all Wooliesx actions
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
