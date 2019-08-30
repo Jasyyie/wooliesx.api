@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
+using wooliesx.service.services;
 
 
 namespace wooliesx.api
@@ -44,6 +45,7 @@ namespace wooliesx.api
                 var xmlPath = Path.Combine(basePath, "Wooliesx.Api.xml");
                 c.IncludeXmlComments(xmlPath);
             });
+            services.AddTransient<IExercise1service, Exercise1service>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
