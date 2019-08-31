@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b35564a9-a634-4cf5-b2ec-f62ff6e52062/resourceGroups/research-development/providers/Microsoft.Web/sites/wooliex-jasmine",
+    "appService.deploySubpath": "wooliesx.api"
+}

@@ -21,7 +21,7 @@ namespace wooliesx.test.services
         {
             var response = _exercise1Service.GetUser();
 
-            Assert.AreEqual("test", response.Name);
+            Assert.AreEqual("Jasmine Kaur", response.Name);
         }
     }
 }

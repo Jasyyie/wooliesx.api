@@ -8,7 +8,7 @@ namespace wooliesx.service.services
     {
         public UserResponse GetUser()
         {
-            var userResponse = new UserResponse() { Name = "test", Token = "1234-455662-22233333-3333" };
+            var userResponse = new UserResponse() { Name = "Jasmine Kaur", Token = "1234-455662-22233333-3333" };
 
             return userResponse;
         }
