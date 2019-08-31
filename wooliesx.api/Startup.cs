@@ -45,7 +45,10 @@ namespace wooliesx.api
                 var xmlPath = Path.Combine(basePath, "Wooliesx.Api.xml");
                 c.IncludeXmlComments(xmlPath);
             });
+
             services.AddTransient<IExercise1Service, Exercise1Service>();
+            services.AddTransient<IExercise2Service, Exercise2Service>();
+            services.AddHttpClient<IExercise2Service, Exercise2Service>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
