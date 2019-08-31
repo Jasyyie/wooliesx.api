@@ -16,6 +16,7 @@ namespace wooliesx.api.Controllers
     public class UserController : Controller
     {
         private readonly IExercise1Service _exercise1Service;
+
         /// <summary>
         /// 
         /// </summary>
@@ -24,6 +25,7 @@ namespace wooliesx.api.Controllers
         {
             _exercise1Service = exercise1Service;
         }
+
         [HttpGet]
         public IActionResult Get()
         {
