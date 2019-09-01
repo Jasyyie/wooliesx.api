@@ -8,8 +8,8 @@ NET Core 2.2 Web API services the request returning back the response from Wooli
 
 ### Getting started
 
-- The Web API is hosted on [Azure](https://wooliex-jasmine.azurewebsites.net/swagger/index.html) and is publicily available
-- Clone the project on [Github](https://github.com/Jasyyie/wooliesx.api) via Http/SSH and pull the repository locally to view the source code
+- The Web API is hosted on [Jasmine Azure](https://wooliex-jasmine.azurewebsites.net/swagger/index.html) and is publicily available
+- Clone the project on [jasmine Github](https://github.com/Jasyyie/wooliesx.api) via Http/SSH and pull the repository locally to view the source code
 
 ### Building
 
