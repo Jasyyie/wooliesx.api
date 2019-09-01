@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using wooliesx.service.services;
-using wooliesx.model.models;
 
 namespace wooliesx.api.Controllers
 {
     /// <summary>
-    /// Controller to manage all Wooliesx actions
+    /// Controller to manage User
     /// </summary>
     [Route("api/answers/[controller]")]
     [ApiController]
@@ -18,7 +13,7 @@ namespace wooliesx.api.Controllers
         private readonly IExercise1Service _exercise1Service;
 
         /// <summary>
-        /// 
+        /// Dependency Injection
         /// </summary>
         /// <param name="exercise1Service"></param>
         public UserController(IExercise1Service exercise1Service)
@@ -26,6 +21,9 @@ namespace wooliesx.api.Controllers
             _exercise1Service = exercise1Service;
         }
 
+        /// <summary>
+        /// Get User
+        /// </summary>
         [HttpGet]
         public IActionResult Get()
         {

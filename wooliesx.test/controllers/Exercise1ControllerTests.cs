@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace wooliesx.test.controllers
 {
+    /// <summary>
+    /// controller test Exercise 1
+    /// </summary>
     [TestClass]
     public class Exercise1ControllerTests
     {

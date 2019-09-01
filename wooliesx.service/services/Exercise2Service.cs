@@ -8,6 +8,9 @@ using System.Linq;
 
 namespace wooliesx.service.services
 {
+    /// <summary>
+    /// Handle sort request service
+    /// </summary>
     public class Exercise2Service : IExercise2Service
     {
         private readonly HttpClient _httpClient;
@@ -16,7 +19,9 @@ namespace wooliesx.service.services
         {
             _httpClient = client;
         }
-
+        /// <summary>
+        /// sorting products based on sort options
+        /// </summary>
         public async Task<List<Product>> SortProducts(string sortOptions)
         {
             if (string.Equals(sortOptions, "Recommended", StringComparison.OrdinalIgnoreCase))
@@ -26,6 +31,10 @@ namespace wooliesx.service.services
             var productList = await GetProducts();
             return SortProductList(sortOptions, productList);
         }
+
+        /// <summary>
+        /// Get products from product resource
+        /// </summary>
         private async Task<List<Product>> GetProducts()
         {
 
@@ -33,6 +42,10 @@ namespace wooliesx.service.services
             return await ResourceLookup<List<Product>>(productResourceApiUrl);
 
         }
+
+        /// <summary>
+        /// calling shopperHistory for sortoption recommended
+        /// </summary>
         private async Task<List<Product>> GetShopperHistory()
         {
 
@@ -42,27 +55,14 @@ namespace wooliesx.service.services
             foreach (Customer c in customers)
             {
                 customerList.AddRange(c.Products);
-
-
             }
-            // var licenseLookupItems = customerList
-            //     .GroupBy(x => new { x.Name, x.Price, x.Quantity })
-            //     .Select(p => p.FirstOrDefault())
-            //     .Select(p => new Product
-            //     {
-            //         Name = p.Name,
-            //         Price = p.Price,
-            //         Quantity = p.Quantity
-
-            //     })
-            //     .ToList();
-            //return (from d in customerList select d).Distinct().ToList();
-            //return customerList.Distinct().ToList();
             return customerList;
 
         }
 
-
+        /// <summary>
+        /// sorting products based on sortoptions Low, High, Ascending, Descending
+        /// </summary>
         private List<Product> SortProductList(string sortOptions, List<Product> productForSort)
         {
             if (string.Equals(sortOptions, "Low", StringComparison.OrdinalIgnoreCase))
@@ -93,6 +93,9 @@ namespace wooliesx.service.services
 
         }
 
+        /// <summary>
+        /// Lookup resource api to servive http request
+        /// </summary>
         private async Task<T> ResourceLookup<T>(string resourceEndpoint)
         {
             const string token = "0ff1271e-5ac4-487f-bb48-37a0aaee81da";
