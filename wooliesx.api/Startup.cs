@@ -48,6 +48,8 @@ namespace wooliesx.api
             services.AddTransient<IExercise1Service, Exercise1Service>();
             services.AddTransient<IExercise2Service, Exercise2Service>();
             services.AddHttpClient<IExercise2Service, Exercise2Service>();
+            services.AddTransient<IExercise3Service, Exercise3Service>();
+            services.AddHttpClient<IExercise3Service, Exercise3Service>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
