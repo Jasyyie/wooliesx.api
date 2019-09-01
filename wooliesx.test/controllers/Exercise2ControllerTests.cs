@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace wooliesx.test.controllers
 {
+    /// <summary>
+    /// controller test Exercise 2
+    /// </summary>
     [TestClass]
     public class Exercise2ControllerTests
     {

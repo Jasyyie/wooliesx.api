@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace wooliesx.test.services
 {
+    /// <summary>
+    /// service test Exercise 2
+    /// </summary>
     [TestClass]
     public class Exercise2ServiceTests
     {
@@ -19,6 +22,7 @@ namespace wooliesx.test.services
         [TestInitialize]
         public void Initialize()
         {
+            //arrange
             var messageHandler = Substitute.ForPartsOf<MockHttpMessageHandler>(jsonResponse, HttpStatusCode.OK);
             var httpClient = new HttpClient(messageHandler);
 
@@ -28,48 +32,53 @@ namespace wooliesx.test.services
         [TestMethod]
         public async Task Exercise2Service_SortProduct_ReturnsProductResponse()
         {
+            //act
             var response = await _exercise2Service.SortProducts("High");
-
+            //assert
             Assert.AreEqual(5, response.Count());
         }
 
         [TestMethod]
         public async Task Exercise2Service_SortAsending_ReturnsProductResponse()
         {
+            //act
             var response = await _exercise2Service.SortProducts("Ascending");
             var firstProduct = response.First();
-
+            //assert
             Assert.AreEqual("Test Product A", firstProduct.Name);
         }
 
         [TestMethod]
         public async Task Exercise2Service_SortDescending_ReturnsProductResponse()
         {
+            //act
             var response = await _exercise2Service.SortProducts("Descending");
             var firstProduct = response.First();
-
+            //assert
             Assert.AreEqual("Test Product F", firstProduct.Name);
         }
 
         [TestMethod]
         public async Task Exercise2Service_SortLow_ReturnsProductResponse()
         {
+            //arrange
             decimal price = 5.0M;
-
+            //act
             var response = await _exercise2Service.SortProducts("Low");
             var firstProduct = response.First();
-
+            //assert
             Assert.AreEqual(price, firstProduct.Price);
         }
 
         [TestMethod]
         public async Task Exercise2Service_SortHigh_ReturnsProductResponse()
         {
+            //arrange
             decimal price = 999999999999.0M;
-
+            //act
             var response = await _exercise2Service.SortProducts("High");
             var firstProduct = response.First();
-
+            //assert
             Assert.AreEqual(price, firstProduct.Price);
         }
     }
